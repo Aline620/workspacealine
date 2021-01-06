@@ -1,0 +1,46 @@
+package variaveis;
+
+public class TipoString {
+
+	public static void main(String[] args) {
+		//String é um tipo de referência.
+		// Date - é um tipo de referência
+		
+		String email = "aline.a.ribeiro@Itau-Unibanco.com.br";
+		
+		System.out.println("Original " + email);
+		System.out.println("Maiusculo: " + email.toUpperCase());
+		System.out.println("Minusculo: " + email.toLowerCase());
+		System.out.println("Qtde Caracteres: " + email.length());
+		System.out.println("Tem arroba?" + email.contains("@"));
+		System.out.println("Posição do arroba: " + email.indexOf("@"));
+		System.out.println("Do 2 até o 5 caracter: " + email.substring(1,5));
+		System.out.println("A partir do 3: " + email.substring(2,email.length()));
+		
+		//exibir somente o usuário do email
+		System.out.println("somente o usuário: " + email.substring(0,email.indexOf("@")));
+		
+		//exibir somento servidor
+		System.out.println("Exibir somente o servidor: " + email.substring(email.indexOf("@")+1,email.length()));
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

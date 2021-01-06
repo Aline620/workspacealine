@@ -1,0 +1,20 @@
+package variaveis;
+
+import javax.swing.JOptionPane;
+
+public class TiposDados {
+
+	public static void main(String[] args) {
+		
+		// No Java existe dois tipo de dados: Alfanumérico e numérico
+		
+		String nome = JOptionPane.showInputDialog("Digite o seu nome completo");
+		int idade = Integer.parseInt(JOptionPane.showInputDialog("Digite sua idade"));
+		double altura = Double.parseDouble(JOptionPane.showInputDialog("Digite sua altura"));
+		
+		System.out.println("Nome: " + nome);
+		System.out.println("Idade: " + idade);
+		System.out.println("Altura: " + altura);
+	}
+
+}

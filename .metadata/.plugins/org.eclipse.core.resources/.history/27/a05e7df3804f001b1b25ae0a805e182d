@@ -1,0 +1,42 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class ExercicioHotel {
+
+	public static void main(String[] args) {
+		
+		
+		short diaria = Short.parseShort(JOptionPane.showInputDialog("Qdte diária"));
+		//float valor_diaria = Float.parseFloat(JOptionPane.showInputDialog(80) );
+		
+		if ( diaria <15){
+			System.out.println("Valor total: " + (diaria * 8)*80);
+			
+		}else if ( diaria == 15) {
+			
+			System.out.println("Valor total: " + (diaria * 6)*80);
+		}else {
+			
+			System.out.println("Valor total: " + (diaria * 5.5)*80);
+		}
+			
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class DesafioDO {
+
+	public static void main(String[] args) {
+		
+	int valor1 = Integer.parseInt(JOptionPane.showInputDialog("Digite um numero!"));
+	int valor2 = 0;
+	int tentativa = 0;
+	do{
+	 
+		valor2 = Integer.parseInt(JOptionPane.showInputDialog("Adivinhe qual o numero"));
+		tentativa = tentativa + 1;
+		
+	}while (valor2!=valor1);
+	
+	System.out.println("Parabensss, você acertou depois de" tentativas "tentativas");
+		
+
+	}
+
+}

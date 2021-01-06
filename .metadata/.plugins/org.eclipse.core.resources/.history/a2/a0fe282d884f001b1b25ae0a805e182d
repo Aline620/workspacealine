@@ -1,0 +1,19 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class ExercicioOperacao {
+
+	public static void main(String[] args) {
+		
+		
+		String valor1 = JOptionPane.showInputDialog("Digite um numero:" + )
+		
+		
+		
+		
+		
+
+	}
+
+}

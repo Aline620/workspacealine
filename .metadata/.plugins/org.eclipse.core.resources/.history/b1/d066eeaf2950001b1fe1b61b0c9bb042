@@ -1,0 +1,20 @@
+package repeticao;
+
+public class DesafioDO {
+
+	public static void main(String[] args) {
+		
+	int valor1 = Integer.parseInt("Digite um numero!");
+	int valor2 = 0;
+	do{
+	 int valor2 = Integer.parseInt("Adivinhe qual foi o numero")
+		
+	}while (valor2!=valor2);
+	
+	System.out.println("Tente novamente");
+		
+		
+
+	}
+
+}
