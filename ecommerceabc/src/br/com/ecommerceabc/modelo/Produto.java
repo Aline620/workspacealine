@@ -6,65 +6,94 @@ package br.com.ecommerceabc.modelo;
  * Diz que:
  * - Todos os atributos devem ser privados
  * - Cada atributo deve possuir individualmente método getters e setters.
- * - 
+ * - Toda classe Beans deve possuir no minimo 2 construtores. Um vazio e outro com todos os parametros para os atributos
  */
 
 
-public class Produto {
+	public class Produto {
 
 	private int id;
 	private String descricao;
 	private float valorVenda;
 	private float valorCompra;
 	private int qtde;
+
+
+
+
 	
-	
-	public void verificarEstoque(String param) {
-		
+	public String toString() {
+		return "Produto [id=" + id + ", descricao=" + descricao + ", valorVenda=" + valorVenda + ", valorCompra="
+				+ valorCompra + ", qtde=" + qtde + "]";
 	}
-	
+
+	public Produto() {
+		super();
+	}
+
+	public Produto(int id, String descricao, float valorVenda, float valorCompra, int qtde) {
+		super();
+		this.id = id;
+		this.descricao = descricao;
+		this.valorVenda = valorVenda;
+		this.valorCompra = valorCompra;
+		this.qtde = qtde;
+	}
+
+	public float getPromocao(float porcentagem) {
+		return valorVenda - valorVenda * (porcentagem/100);
+	}
+
+	public String verificarEstoque() {
+		if (qtde > 20) {
+			return "Estoque alto";
+		}else if (qtde < 5) {
+			return "Estoque baixo";
+		}else {
+			return "Estoque normal";
+		}
+
+	}
+
 	public void atualizarValores(float porcentagem) {
-		
-		
+		valorVenda = valorVenda + valorVenda * (porcentagem/100);
+		valorCompra = valorCompra + valorCompra * (porcentagem/100);
+
 	}
-	
-	public void getTotalCompras() {
-		
+
+	public float getTotalCompras() {
+		return valorCompra * qtde;
 	}
-	
-	public void getTotalVendas() {
-		
-		
+
+	public float getTotalVendas() {
+		return valorVenda * qtde;
 	}
-	
+
+
 	public float getPromocao() {
-		return 
+		return valorVenda * (float) 0.9; 
 	}
-	
-	
-	public void getPromocao() {
-		
-		
-	}
-	
-	public String setAll () {
-		return 
-				"Id: " + this.id + "\n" +
-				"Descrição do produto: " + this.descricao + "\n" +
-				"Valor da venda: " + this.valorVenda + "\n" +
-				"Valor da compra: " + this.valorCompra + "\n" +
-				"Quantidade de produtos: " + this.qtde ;
-	}
-	
-	public void getAll(int id, String descricao, float valorVenda, float ValorCompra, int qtde) {
+
+
+	public void setAll(int id, String descricao, float valorVenda, float ValorCompra, int qtde) {
 		this.id = id;
 		this.descricao = descricao;
 		this.valorVenda = valorVenda;
 		this.valorCompra = ValorCompra;
 		this.qtde = qtde;
-					
+
 	}
-	
+
+
+	public String getAll () {
+		return 
+				"Id: " + id + "\n" +
+				"Descrição do produto: " + descricao + "\n" +
+				"Valor da venda: " + valorVenda + "\n" +
+				"Valor da compra: " + valorCompra + "\n" +
+				"Quantidade de produtos: " + qtde ;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -95,20 +124,20 @@ public class Produto {
 	public void setQtde(int qtde) {
 		this.qtde = qtde;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
