@@ -8,7 +8,8 @@ public class Curso {
 	private Unidade unidade;
 	
 	
-	public void getMensalidade (float mensalidade) {
+	public float getMensalidade () {
+		return valor/(cargaHoraria/100);
 		
 	}
 	

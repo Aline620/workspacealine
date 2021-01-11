@@ -11,7 +11,10 @@ public class Aluno {
 	
 	
 	public String getString() {
-		return "Seja bemvindo!!";
+		if(nome.contains(" ")==true) {
+			return nome.substring(0, nome.indexOf(" "));
+		}
+		return nome;
 	}
 	
 	

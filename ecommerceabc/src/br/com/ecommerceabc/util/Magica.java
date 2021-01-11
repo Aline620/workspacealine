@@ -1,4 +1,4 @@
-package br.com.universidade.util;
+package br.com.ecommerceabc.util;
 
 import javax.swing.JOptionPane;
 

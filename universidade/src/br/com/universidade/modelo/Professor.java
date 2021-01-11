@@ -9,13 +9,28 @@ public class Professor {
 	private String area;
 	private String email;
 	
-	public void calcularSalario() {
-		
+	public String calcularSalario(int qtdeHoras) {
+		float salarioBruto = (float) (valorHora * 1.06)* qtdeHoras;
+		float fgts = salarioBruto * (float) 0.08;
+		float salarioLiquido = salarioBruto - fgts;
+		return "Salario Bruto: " + salarioBruto + "\n" + "GTS: " + fgts + "Salario Liquido: " + salarioLiquido;
 		
 	}
 	
 	public String getSaudacao() {
-		return "Seja bem vindo!!";
+		String primeironome=nome;
+		if (nome.contains(" ")==true) {
+			primeironome = nome.substring(0, nome.indexOf(" "));
+		}
+		if (formacao.toUpperCase().equals("DOUTOR")==true) {
+			return "PhD " + primeironome;
+		}else if (formacao.toUpperCase().equals("MESTRE")==true) {
+			return "Ms. " + primeironome;
+		}else if (formacao.toUpperCase().equals("ESPECIALISTA")==true){
+			return "Especialista " + primeironome;
+		}else {
+			return "Sem formação: " + primeironome;
+		}	
 	}
 	
 	public void setAll(String nome, float valorHora, String formacao, String area, String email) {

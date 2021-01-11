@@ -11,7 +11,12 @@ public class Turma {
 	
 	
 	public String getResumo() {
-		return " ";
+		return 
+				"Nome do Curso: " + curso.getDescricao() + "\n" +
+				"Sala: " + sala + "\n" +
+				"Aluno: " + aluno.getString() + "\n" +
+				"Nome Unidade: " + curso.getUnidade().getNome() + "\n" +
+				"Professor: " + professor.getSaudacao();
 	}
 	
 	public void setAll(String sigla, String periodo, String sala, Aluno aluno, Professor professor, Curso curso) {
