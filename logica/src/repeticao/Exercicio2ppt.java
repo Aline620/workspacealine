@@ -29,7 +29,7 @@ public class Exercicio2ppt {
 		} 
 	} while (JOptionPane.showConfirmDialog(null, "Continuar?",  "Pergunta", JOptionPane.YES_NO_OPTION)==00);
 	
-	System.out.println("Maior escolaridade é: " + );
+	System.out.println("Maior escolaridade é: " + escolaridade );
 	
 
 			
